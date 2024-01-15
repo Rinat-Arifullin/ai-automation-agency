@@ -10,13 +10,13 @@ interface IProps {
     url: string;
 }
 
-const Case = ({index, title, url}:IProps) => {
+const Case = ({index, title}:IProps) => {
     return <div className={styles.case}>
         <div className={styles.header}>
             <div className={styles.index}>{index}</div>
             <h1 className={styles.title}>{title}</h1>
         </div>
-        <div className={styles.link}>
+        <div >
             <a>Подробнее</a>
             <LinkArrow color={'black'}/>
         </div>

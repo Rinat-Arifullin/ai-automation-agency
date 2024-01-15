@@ -8,7 +8,7 @@ const startMessage:IMessage = {
 }
 
 const AiChat = () => {
-    const [messages, setMessages] = useState<IMessage[]>([startMessage])
+    const [messages] = useState<IMessage[]>([startMessage])
 
     return <Frame theme={EFrameTheme.LIGHT}>
         <div>
