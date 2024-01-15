@@ -44,3 +44,20 @@
     border-bottom: 1px solid white;
     justify-content: flex-end;
 }
+
+@media screen and (max-width: 700px) {
+    .title {
+        padding: 0 20px;
+    }
+    .row {
+        justify-content: center !important;
+    }
+
+    .row ul {
+        max-width: 50%;
+    }
+
+    .row ul li {
+        margin-bottom: 20px;
+    }
+}

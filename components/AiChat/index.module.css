@@ -1,0 +1,35 @@
+.chat {
+    height: 300px;
+    overflow-y: auto;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.isTyping {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.message {
+    margin-bottom: 10px;
+}
+
+.message .from {
+    font-weight: 500;
+    display: inline-block;
+    width: 100%;
+}
+
+.from.isUser{
+    text-align: right;
+}
+
+.message .text {
+    margin: 0;
+}
+
+.message .text.isUser {
+    text-align: right;
+}
+

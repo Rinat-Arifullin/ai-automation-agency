@@ -2,6 +2,19 @@
     color: white;
 }
 
+.submit {
+    cursor: pointer;
+    font-size: 18px;
+    text-align: right;
+    margin-top: 20px;
+}
+
+.submit a {
+    text-decoration: none;
+    color: var(--yellow);
+    padding: 10px;
+}
+
 .title {
     font-size: 4rem;
     font-weight: 500;
@@ -47,6 +60,14 @@
     border-bottom: none;
 }
 
+.content ul li {
+    margin-bottom: 1.3rem;
+}
+
+.content ul li:last-child {
+    margin-bottom: 0;
+}
+
 @media screen and (max-width: 1135px) {
     .content {
         flex-direction: column;
@@ -56,10 +77,8 @@
     }
 }
 
-.content ul li {
-    margin-bottom: 1.3rem;
-}
-
-.content ul li:last-child {
-    margin-bottom: 0;
+@media screen and (max-width: 700px) {
+    .title {
+        margin-left: 20px;
+    }
 }

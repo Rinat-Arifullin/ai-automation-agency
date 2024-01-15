@@ -1,6 +1,8 @@
 import React from 'react';
 
 import styles from './index.module.css';
+import LinkArrow from "../../../icons/linkArrow";
+import Link from "next/link";
 
 const services: string[] = [
     'AI-автоматизация ключевых бизнес-процессов компании',
@@ -23,6 +25,11 @@ const Services = () => {
                     <div className={styles.text}>{service}</div>
                 </div>)
             })}
+        </div>
+        <div className={styles.submit}>
+            <Link href='#contacts'>
+                Оставить заявку <LinkArrow color='yellow'/>
+            </Link>
         </div>
     </div>
 }

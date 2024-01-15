@@ -18,7 +18,7 @@ const ContactForm = () => {
                     <h2>Обратный звонок</h2>
                     <Input type={EInputType.TEXT} label='Имя:' placeholder="Иван"/>
                     <Input type={EInputType.PHONE} label='Телефон:' placeholder="+7 (999) 999 99 99"/>
-                    <Input type={EInputType.AREA} label='Опишите Ваш бизнес или запрос:'/>
+                    <Input type={EInputType.AREA} className={styles.area} label='Опишите Ваш бизнес или запрос:'/>
                     <div className={styles.submit}>Оставить заявку <LinkArrow color='yellow'/></div>
                 </div>
                 <div>

@@ -53,3 +53,18 @@
         gap: 0;
     }
 }
+
+@media screen and (max-width: 700px) {
+    .title {
+        font-size: 3rem;
+        padding: 0 20px;
+    }
+
+    .subTitle {
+        margin-left: 20px;
+    }
+
+    .card h2 {
+        margin-left: 20px;
+    }
+}
