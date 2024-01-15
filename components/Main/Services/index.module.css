@@ -1,0 +1,35 @@
+.services {
+    color: white;
+}
+
+.title {
+    font-size: 4rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+.content {
+    display: flex;
+}
+
+.content ul {
+    width: 100%;
+    font-size: 24px;
+    line-height: 150%;
+}
+
+@media screen and (max-width: 1135px) {
+    .content {
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.content ul li {
+    margin-bottom: 1.3rem;
+}
+
+.content ul li:last-child {
+    margin-bottom: 0;
+}

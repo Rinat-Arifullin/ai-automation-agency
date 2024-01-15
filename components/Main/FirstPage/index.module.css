@@ -1,0 +1,65 @@
+.firstPage {
+    padding: 100px;
+    display: grid;
+    grid-template-areas:
+            'leadMagnet aiTitle'
+            'title aiBlock'
+            'footer footer';
+    grid-row-gap: 80px;
+}
+
+.leadMagnet {
+    grid-area: leadMagnet;
+}
+
+.leadMagnet div {
+    border-radius: 25px;
+    border: 1px solid white;
+    width: max-content;
+}
+
+.leadMagnet div p {
+    padding: 8px 75px;
+    font-size: 18px;
+    margin: 0;
+}
+
+.aiTitle {
+    grid-area: aiTitle;
+}
+
+.aiTitle h2 {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    font-size: 32px;
+}
+
+.aiTitle h2 span {
+    color: var(--yellow);
+}
+
+.title {
+    grid-area: title;
+}
+
+
+.title h1 {
+    font-size: 4rem;
+    font-weight: 500;
+}
+
+.aiBlock {
+    grid-area: aiBlock;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+.footer p {
+    font-size: 32px;
+    line-height: 140%;
+    margin: 0;
+    padding: 0;
+}

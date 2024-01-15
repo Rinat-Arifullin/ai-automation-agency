@@ -1,0 +1,52 @@
+.header {
+    top: 20px;
+    position: sticky;
+    background: var(--black);
+    backdrop-filter: blur(5px);
+    border-radius: 25px;
+    padding: 12px;
+    margin: 20px 0;
+    transition: .3s;
+    border: 1px solid transparent;
+}
+
+.header.border {
+    border: 1px solid var(--yellow);
+}
+
+.header nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header ul {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    gap: 5%;
+}
+
+.header ul li a {
+    text-decoration: none;
+    color: white;
+    position: relative;
+    font-size: 1.3rem;
+}
+
+.header ul li a:after {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 0%;
+    background: var(--yellow);
+    transition: .3s;
+    margin-top: 5px;
+    position: absolute;
+}
+
+.header ul li:hover a:after{
+    width: 100%;
+}
+

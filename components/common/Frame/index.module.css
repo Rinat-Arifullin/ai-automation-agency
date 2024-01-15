@@ -1,0 +1,24 @@
+.frameWrapper {
+    border-radius: 25px;
+    padding: 15px 20px;
+}
+
+.frameWrapper.light {
+    background: var(--blue-gradient);
+}
+
+.frameWrapper.dark {
+    background: var(--dark-gradient);
+    color: var(--white);
+}
+
+.wrapperOutline {
+    border: 1px solid var(--white);
+    padding: 10px 8px;
+    border-radius: 23px;
+    transition: .3s;
+}
+
+.wrapperOutline:hover {
+    border: 1px solid var(--yellow);
+}

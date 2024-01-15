@@ -1,0 +1,30 @@
+.case {
+    color: black;
+    background: white;
+    border-radius: 25px;
+    padding: 20px;
+    display: grid;
+    transition: .3s;
+    box-shadow: 0 0 0 0 white;
+    cursor: pointer;
+}
+
+.case:hover {
+    box-shadow: 0 0 0 10px white;
+}
+
+.case .header .title {
+    padding: 0;
+    margin-top: 5px;
+    font-size: 28px;
+}
+
+.case .header {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+.case .index {
+    font-size: 52px;
+    font-weight: 600;
+}

@@ -1,0 +1,52 @@
+.wrapper {
+    border-radius: 25px;
+    background: var(--yellow);
+    padding: 40px 8px;
+    padding-bottom: 8px;
+}
+
+.frame {
+    padding: 20px 100px;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.content h2 {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    font-size: 32px;
+    margin-bottom: 2rem;
+}
+
+.left {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px
+}
+
+@media (max-width: 1024px) {
+    .content {
+        grid-template-columns: 1fr;
+    }
+}
+
+.submit {
+    cursor: pointer;
+    font-size: 18px;
+    color: var(--yellow);
+    text-align: right;
+}
+
+.title {
+    font-size: 42px;
+    font-weight: 500;
+}
+
+.aiTitle span {
+    color: var(--yellow);
+}

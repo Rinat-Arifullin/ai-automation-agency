@@ -1,0 +1,28 @@
+.cases {
+    padding: 30px 40px;
+}
+
+.cases .list{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 25px;
+}
+
+@media screen and (max-width: 1135px) {
+    .cases .list {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .cases .list {
+        grid-template-columns: 1fr;
+    }
+}
+
+.title {
+    font-size: 4rem;
+    font-weight: 500;
+    margin: 0;
+}

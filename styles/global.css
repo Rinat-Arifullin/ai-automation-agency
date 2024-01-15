@@ -1,0 +1,22 @@
+:root {
+    /*---colors---*/
+    --white: #FFFFFF;
+    --black: rgba(7, 4, 4, 0.27);
+    --dark-green: #142423;
+    --blue: #345E79;
+    --blue-gradient: linear-gradient(119deg, #608287 15.97%, #466C7F 39.92%, #04366A 100%);
+    --dark-gradient: linear-gradient(247deg, #111D1C 16.5%, #060D13 99.7%, #111D1C 99.71%);
+    --yellow: #FBFF53;
+    /*------------*/
+}
+
+* {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--dark-green);
+    margin: 0;
+    padding: 0;
+}
+
