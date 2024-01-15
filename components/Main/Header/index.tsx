@@ -24,7 +24,7 @@ const Header = () => {
         <nav>
             <ul>
                 {navItems.map(item => (<li key={item.label}>
-                    <Link href={item.url} smooth="true" scroll={true}>{item.label}</Link>
+                    <Link href={item.url} scroll={true}>{item.label}</Link>
                 </li>))}
             </ul>
         </nav>
