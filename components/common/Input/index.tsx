@@ -9,7 +9,7 @@ const Input = ({type, label, ...rest}:TInputProps) => {
     if(type === EInputType.PHONE) {
         return <div className={`${styles.wrapper}`}>
             <label>{label}</label>
-            <PhoneInput  className={`${styles.input} ${rest.className}`} {...rest}/>
+            <PhoneInput  className={`${styles.input} ${rest.className}`} label={label} {...rest}/>
         </div>
     }
 
