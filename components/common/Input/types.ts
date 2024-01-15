@@ -1,5 +1,3 @@
-import { InputHTMLAttributes } from 'react';
-
 export enum EInputType {
     TEXT = 'text',
     PHONE = 'tel',
@@ -10,4 +8,7 @@ export type TInputProps = {
     label: string;
     type?: EInputType;
     onChange?: (value: string) => void;
-} & InputHTMLAttributes<HTMLInputElement>
+    placeholder?: string
+    value?: string
+    className?: string;
+}

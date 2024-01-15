@@ -16,8 +16,13 @@ const Input = ({type, label, ...rest}:TInputProps) => {
     return <div className={`${styles.wrapper} ${type === EInputType.AREA && styles.textarea}`}>
         <label>{label}</label>
         {type === EInputType.AREA ?
-            <textarea className={`${styles.input} ${rest.className} `} {...rest}/> :
-            <input className={`${styles.input} ${rest.className}`} type={type} {...rest}/>
+            <textarea
+                className={`${styles.input} ${rest.className} `} {...rest}
+                onChange={e=>rest.onChange && rest.onChange(e.target.value)}/> :
+            <input
+                className={`${styles.input} ${rest.className}`}
+                type={type} {...rest}
+                onChange={e=>rest.onChange && rest.onChange(e.target.value)}/>
         }
     </div>
 }
