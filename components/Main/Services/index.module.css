@@ -10,18 +10,48 @@
 
 .content {
     display: flex;
+    flex-direction: column;
+    border: 1px solid white;
+    border-radius: 25px;
+    margin-top: 40px;
 }
 
-.content ul {
-    width: 100%;
+.content .index {
+    font-size: 38px;
+    border-right: 1px solid white;
+    padding:  10px 20px;
+    width: 30px;
+    min-width: 30px;
+    text-align: center;
+}
+
+.content .index:last-child {
+    border-bottom: none;
+}
+
+.content .text {
     font-size: 24px;
-    line-height: 150%;
+    padding: 19px 20px;
+}
+
+.content .row {
+    display: flex;
+    border-bottom: 1px solid white;
+}
+
+.content .row:last-child {
+    border-bottom: none;
+}
+
+.content .service:last-child {
+    border-bottom: none;
 }
 
 @media screen and (max-width: 1135px) {
     .content {
         flex-direction: column;
-        margin: 0;
+        margin-left: 0;
+        margin-right: 0;
         padding: 0;
     }
 }
