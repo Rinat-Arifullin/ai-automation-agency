@@ -28,3 +28,14 @@
     font-size: 52px;
     font-weight: 600;
 }
+
+@media screen and (max-width: 700px) {
+    .case .index {
+        font-size: var(--mobile-title);
+    }
+
+    .case .header .title {
+        font-size: var(--mobile-subtitle);
+        margin-top: 0;
+    }
+}

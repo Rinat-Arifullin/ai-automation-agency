@@ -15,13 +15,14 @@
 
 .leadMagnet div {
     border-radius: 25px;
+    width: 100%;
+    padding: 8px 0;
     border: 1px solid white;
-    width: max-content;
 }
 
 .leadMagnet div p {
-    padding: 8px 75px;
     font-size: 18px;
+    text-align: center;
     margin: 0;
 }
 
@@ -75,6 +76,28 @@
             'aiTitle'
             'aiBlock'
             'footer';
-        grid-row-gap: 40px;
+        grid-row-gap: 10px;
     }
+
+    .title h1 {
+        font-size: var(--mobile-title);
+        font-weight: 500;
+    }
+
+    .aiTitle {
+        margin-bottom: 20px;
+    }
+
+    .aiTitle h2{
+        font-size: var(--mobile-subtitle);
+    }
+
+    .aiBlock {
+        width: 100%;
+    }
+
+    .footer p {
+        font-size: var(--mobile-text);
+    }
+
 }

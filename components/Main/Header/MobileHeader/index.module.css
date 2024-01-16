@@ -1,0 +1,66 @@
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.btn {
+    position: absolute;
+    width: 25px;
+    right: 30px;
+    top: 25px;
+    z-index: 100;
+    height: 25px;
+}
+
+.btn .line {
+    width: 100%;
+    height: 3px;
+    background: white;
+    transition: .3s;
+}
+
+.btn .line:first-child {
+    margin-bottom: 5px;
+}
+
+.btn.isOpen .line {
+    transform: rotate(135deg);
+}
+
+.btn.isOpen .line:first-child {
+    transform: rotate(45deg);
+    margin-bottom: -3px;
+}
+
+.menu {
+    position: absolute;
+    top: -600px;
+    width: calc(100% - 50px);
+    background: var(--black);
+    padding: 25px;
+    transition: .3s;
+}
+
+.menu.isOpen {
+    top: 0;
+}
+
+.menu ul {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.menu ul li a{
+    font-size: var(--mobile-subtitle);
+    text-decoration: none;
+    color: white;
+}
+
+.menu .title {
+    font-size: var(--mobile-title);
+    color: white;
+}

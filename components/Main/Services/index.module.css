@@ -80,5 +80,21 @@
 @media screen and (max-width: 700px) {
     .title {
         margin-left: 20px;
+        font-size: var(--mobile-title);
     }
+
+    .content .index {
+        font-size: var(--mobile-title);
+        padding:  20px;
+    }
+
+    .content .text {
+        font-size: var(--mobile-text);
+    }
+
+    .submit {
+        font-size: var(--mobile-text);
+        text-align: center;
+    }
+
 }

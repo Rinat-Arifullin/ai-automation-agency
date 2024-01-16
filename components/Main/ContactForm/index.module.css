@@ -5,6 +5,19 @@
     padding-bottom: 8px;
 }
 
+.input {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: var(--mobile-text);
+    transition: .3s;
+    outline: 2px solid transparent;
+}
+
+.input:focus {
+    outline: 2px solid var(--yellow);
+}
+
 .frame {
     padding: 20px 100px;
 }
@@ -52,6 +65,15 @@
 }
 
 @media screen and (max-width: 700px) {
+    .title {
+        font-size: var(--mobile-title);
+    }
+
+    .content h2 {
+        font-size: var(--mobile-subtitle);
+        margin-bottom: 0;
+    }
+
     .wrapper {
         padding: 40px 8px;
         padding-bottom: 8px;
@@ -65,11 +87,28 @@
         grid-template-columns: 1fr;
     }
 
+    .submit {
+        font-size: var(--mobile-text);
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
     .left {
-        width: 350px;
+        width: 100%;
     }
 
     .area {
         width: 330px;
     }
+
+    .aiTitle {
+        font-size: var(--mobile-subtitle)
+    }
+
+    .aiBlock {
+        display: flex;
+        flex-direction: column;
+        gap: 20px
+    }
+
 }

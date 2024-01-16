@@ -23,7 +23,9 @@ const FirstPage = () => {
                 Agency <br/>
             </h1>
         </div>
+        <div className={styles.aiBlock}>
         <AiChat/>
+        </div>
         <div className={styles.footer}>
             <p>
                 Наши уникальные решения в области автоматизации с использованием AI меняют правила игры в мире бизнеса,

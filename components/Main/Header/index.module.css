@@ -8,6 +8,7 @@
     margin: 20px 0;
     transition: .3s;
     border: 1px solid transparent;
+    z-index: 100;
 }
 
 .header.border {
@@ -50,3 +51,9 @@
     width: 100%;
 }
 
+
+@media screen and (max-width: 700px) {
+    .header {
+        
+    }
+}

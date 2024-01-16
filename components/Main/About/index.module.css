@@ -56,15 +56,22 @@
 
 @media screen and (max-width: 700px) {
     .title {
-        font-size: 3rem;
+        font-size: var(--mobile-title);
         padding: 0 20px;
     }
 
     .subTitle {
-        margin-left: 20px;
+        padding: 0;
+        margin: 20px;
+        font-size: var(--mobile-text);
     }
 
     .card h2 {
         margin-left: 20px;
+        font-size: var(--mobile-subtitle);
+    }
+
+    .card p {
+        font-size: var(--mobile-text);
     }
 }
