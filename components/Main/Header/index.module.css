@@ -50,10 +50,3 @@
 .header ul li:hover a:after{
     width: 100%;
 }
-
-
-@media screen and (max-width: 700px) {
-    .header {
-        
-    }
-}

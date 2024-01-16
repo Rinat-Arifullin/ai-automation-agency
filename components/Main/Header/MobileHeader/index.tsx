@@ -24,7 +24,7 @@ const MobileHeader = () => {
             </h1>
             <ul>
                 {navItems.map(navItem=>{
-                    return <li key={navItem.label}>
+                    return <li key={navItem.label} onClick={toggleOpen}>
                         <a href={navItem.url}>{navItem.label}</a>
                     </li>
                 })}
