@@ -5,6 +5,7 @@
 }
 
 .btn {
+    padding: 10px;
     position: absolute;
     width: 25px;
     right: 30px;
