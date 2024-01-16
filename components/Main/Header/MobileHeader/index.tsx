@@ -12,7 +12,7 @@ const MobileHeader = () => {
     }
 
     return <div className={styles.header}>
-        <div className={`${styles.btn} ${isOpen?styles.isOpen: ''}`} onClick={toggleOpen}>
+        <div className={`${styles.btn} ${isOpen? styles.isOpen: ''}`} onClick={toggleOpen}>
             <div className={styles.line}></div>
             <div className={styles.line}></div>
         </div>

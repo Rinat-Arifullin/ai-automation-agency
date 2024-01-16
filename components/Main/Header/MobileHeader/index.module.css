@@ -38,13 +38,14 @@
     position: absolute;
     width: calc(100% - 50px);
     background: var(--black);
+    top: -600px;
     padding: 25px;
     transition: .3s;
     will-change: transform;
 }
 
 .menu.isOpen {
-    transform: translateY(-600px);
+    transform: translateY(600px);
 }
 
 .menu ul {
