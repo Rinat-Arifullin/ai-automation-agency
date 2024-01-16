@@ -5,7 +5,7 @@ import {navItems} from "../constants";
 
 
 const MobileHeader = () => {
-    const [isOpen, setIsOpen] = useState(true);
+    const [isOpen, setIsOpen] = useState(false);
 
     const toggleOpen = () => {
         setIsOpen(state=>!state)
