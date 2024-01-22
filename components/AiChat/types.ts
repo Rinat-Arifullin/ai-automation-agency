@@ -1,4 +1,10 @@
+export enum ERole {
+    USER = 'user',
+    ASSISTANT = 'assistant',
+    SYSTEM = 'system'
+}
+
 export interface IMessage {
-    text: string;
-    isUser: boolean;
+    role: ERole;
+    content: string;
 }

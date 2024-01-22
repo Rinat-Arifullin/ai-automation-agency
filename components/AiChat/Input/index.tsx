@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 
 import CloseIcon from "icons/CloseIcon";
 import ArrowIcon from "icons/ArrowIcon";
@@ -6,12 +6,11 @@ import ArrowIcon from "icons/ArrowIcon";
 import styles from "./index.module.css";
 
 interface IProps {
-    value: string;
-    onChange: (value: string) => void;
-    onSend: () => void;
+    onSend: (value:string) => void;
 }
 
-const ChatInput = ({value, onChange, onSend}:IProps) => {
+const ChatInput = ({onSend}:IProps) => {
+    const [value, onChange] = useState('');
     const onChangeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
         onChange(event.target.value);
     }
@@ -22,7 +21,8 @@ const ChatInput = ({value, onChange, onSend}:IProps) => {
 
     const onSubmit = (event: React.FormEvent<HTMLFormElement>)=>{
         event.preventDefault();
-        onSend()
+        onChange('');
+        onSend(value)
     }
 
     return <div className={styles.wrapper}>
@@ -37,7 +37,7 @@ const ChatInput = ({value, onChange, onSend}:IProps) => {
          <div onClick={()=>!!value.length && onClear()} className={`${styles.clear} ${!!value.length && styles.visible}`}>
              <CloseIcon/>
          </div>
-        <div onClick={onSend} className={`${styles.send} ${!!value.length && styles.visible}`}>
+        <div onClick={()=>onSend(value)} className={`${styles.send} ${!!value.length && styles.visible}`}>
             <ArrowIcon/>
         </div>
     </div>

@@ -5,10 +5,10 @@ export const navItems:TNavItem[] = [
         label: 'Про нас',
         url: '#about',
     },
-    {
-        label: 'Кейсы',
-        url: '#cases',
-    },
+    // {
+    //     label: 'Кейсы',
+    //     url: '#cases',
+    // },
     {
         label: 'Услуги',
         url: '#services',

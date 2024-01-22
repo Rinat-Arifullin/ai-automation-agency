@@ -1,0 +1,36 @@
+.collapseContainer {
+    overflow: hidden;
+    transition: 0.3s ease;
+    padding: 10px 20px;
+}
+
+.collapseLabel {
+    cursor: pointer;
+    user-select: none;
+    font-size: var(--mobile-text);
+    text-decoration: underline;
+}
+
+.collapseContent {
+    overflow: hidden;
+    transition:  0.3s ease;
+    font-size: var(--desktop-text);
+}
+
+
+.collapseContainer .collapseContent{
+    transition:  0.3s ease;
+    height: 150px;
+}
+
+.collapseContainer.isCollapsed .collapseContent{
+    height: 0px;
+}
+
+@media screen and (max-width: 700px) {
+    .collapseContent {
+            overflow: hidden;
+            transition: 0.3s ease;
+            font-size: var(--mobile-text);
+        }
+}

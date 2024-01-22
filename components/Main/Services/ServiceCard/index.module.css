@@ -1,0 +1,45 @@
+.wrapper {
+    border-radius: 25px;
+    padding: 20px;
+}
+
+.index {
+    font-size: 56px;
+    display: inline-block;
+    width: 45px;
+}
+
+.wrapper h2 {
+    font-size: var(--desktop-subtitle);
+    display: inline;
+}
+
+.wrapper p {
+    font-size: 18px;
+}
+
+.wrapper.white {
+    background: white;
+    color: black;
+}
+
+.wrapper.black {
+    color: white;
+    border: 1px solid white;
+}
+
+@media screen and (max-width: 700px) {
+    .index {
+        font-size: 40px;
+        width: 20px;
+    }
+
+    .wrapper h2 {
+        font-size: var(--mobile-subtitle);
+        font-weight: 500 !important;
+    }
+
+        .wrapper p {
+            font-size: 16px;
+        }
+}

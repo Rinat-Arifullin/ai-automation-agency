@@ -1,37 +1,29 @@
-import React from 'react';
+import React from 'react'
+
+import Frame from 'components/common/Frame'
+import { services } from './constats'
+import ServiceBlock from './ServiceBlock'
 
 import styles from './index.module.css';
-import LinkArrow from "../../../icons/linkArrow";
-import Link from "next/link";
-
-const services: string[] = [
-    'AI-автоматизация ключевых бизнес-процессов компании',
-    'Полный цикл AI-автоматизации работы на маркетплейсах',
-    'Автоматизация работы над визуальными материалами компании',
-    'Создание автоворонок на основе ChatGPT',
-    'Создание чат-ботов в мессенджерах, социальных сетях и на сайтах на основе ChatGPT',
-    'Онбординг новых сотрудников с помощью чат-ботов. Первичное собеседование персонала',
-    'Создание AI-консультантов',
-    'HR процессы'
-]
 
 const Services = () => {
-    return <div id="services" className={styles.services}>
-        <h1 className={styles.title}>Другие услуги</h1>
-        <div className={styles.content}>
-            {services.map((service, index) => {
-                return (<div key={service} className={styles.row}>
-                    <div className={styles.index}>{index + 1}</div>
-                    <div className={styles.text}>{service}</div>
-                </div>)
-            })}
-        </div>
-        <div className={styles.submit}>
-            <Link href='#contacts'>
-                Оставить заявку <LinkArrow color='yellow'/>
-            </Link>
-        </div>
-    </div>
+    return (
+        <Frame>
+            <h1 className={styles.title}>Услуги</h1>
+            <div className={styles.serviceBlockWrapper}>
+                {services.map((serviceBlock, index) => {
+                    return (
+                        <ServiceBlock
+                            key={serviceBlock.title}
+                            title={serviceBlock.title}
+                            cardList={serviceBlock.cardList}
+                            isOdd={index % 2 === 0}
+                        />
+                    )
+                })}
+            </div>
+        </Frame>
+    )
 }
 
-export default Services;
+export default Services

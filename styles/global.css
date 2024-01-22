@@ -10,6 +10,10 @@
     /*------------*/
 
     /*---size---*/
+    --desktop-title: 54px;
+    --desktop-subtitle: 32px;
+    --desktop-text: 24px;
+
     --mobile-title: 28px;
     --mobile-subtitle: 20px;
     --mobile-text: 16px;

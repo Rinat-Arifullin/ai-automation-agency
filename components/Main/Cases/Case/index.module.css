@@ -16,7 +16,7 @@
 .case .header .title {
     padding: 0;
     margin-top: 5px;
-    font-size: 28px;
+    font-size: var(--desktop-subtitle);
 }
 
 .case .header {

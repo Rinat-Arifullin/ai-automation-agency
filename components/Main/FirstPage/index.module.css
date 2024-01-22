@@ -1,82 +1,63 @@
 .firstPage {
-    padding: 100px;
-    display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    grid-template-areas:
-            'leadMagnet aiTitle'
-            'title aiBlock'
-            'footer footer';
-    grid-row-gap: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .leadMagnet {
-    grid-area: leadMagnet;
+    width: fit-content;
+    padding: 0 100px;
+    padding-top: 40px;
 }
 
 .leadMagnet div {
     border-radius: 25px;
     width: 100%;
-    padding: 8px 0;
+    padding: 8px 10px;
     border: 1px solid white;
 }
 
 .leadMagnet div p {
-    font-size: 18px;
+    font-size: var(--desktop-text);
     text-align: center;
     margin: 0;
 }
 
-.aiTitle {
-    grid-area: aiTitle;
-}
-
-.aiTitle h2 {
-    margin: 0;
-    padding: 0;
-    font-weight: 400;
-    font-size: 32px;
-}
-
-.aiTitle h2 span {
-    color: var(--yellow);
-}
 
 .title {
     grid-area: title;
+    padding: 0 100px;
 }
 
 
 .title h1 {
-    font-size: 4rem;
+    font-size: var(--desktop-title);
     font-weight: 500;
 }
 
-.aiBlock {
-    grid-area: aiBlock;
-}
 
 .footer {
     grid-area: footer;
+    padding: 0 100px;
+    padding-bottom: 20px;
 }
 
 .footer p {
-    font-size: 32px;
+    font-size: var(--desktop-text);
     line-height: 140%;
     margin: 0;
     padding: 0;
 }
 
 @media screen and (max-width: 700px) {
-    .firstPage {
-        grid-template-columns: 1fr;
-        padding: 10px;
-        grid-template-areas:
-            'leadMagnet'
-            'title'
-            'aiTitle'
-            'aiBlock'
-            'footer';
-        grid-row-gap: 10px;
+    .leadMagnet {
+        padding: 0;
+        margin: 0 auto;
+    }
+
+    .title {
+        margin: 0 auto;
+        padding: 0;
     }
 
     .title h1 {
@@ -84,16 +65,8 @@
         font-weight: 500;
     }
 
-    .aiTitle {
-        margin-bottom: 20px;
-    }
-
-    .aiTitle h2{
-        font-size: var(--mobile-subtitle);
-    }
-
-    .aiBlock {
-        width: 100%;
+    .footer {
+        padding: 0 30px;
     }
 
     .footer p {

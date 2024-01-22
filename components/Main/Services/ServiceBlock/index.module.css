@@ -1,0 +1,23 @@
+
+.wrapper h2 {
+    font-size: var(--desktop-subtitle);
+    font-weight: 300;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+@media screen and (max-width: 700px) {
+
+    .wrapper h2 {
+            font-size: var(--mobile-subtitle);
+            padding: 0 20px;
+            font-weight: 400;
+    }
+    .content {
+        grid-template-columns: 1fr;
+    }
+}

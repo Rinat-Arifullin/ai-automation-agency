@@ -1,45 +1,57 @@
-import React, {useState} from 'react';
-import Frame, {EFrameTheme} from "components/common/Frame";
+import React from 'react'
+import Frame, { EFrameTheme } from 'components/common/Frame'
+import useAiChat from 'AiChat'
 
+import ChatInput from './Input'
+import { ERole } from './types'
 import styles from './index.module.css'
 
-import {IMessage} from "./types";
-import ChatInput from "./Input";
-
-const startMessage:IMessage = {
-    text: 'Я ассистент по обслуживанию клиентов, с радостью отвечу на ваши вопросы! ',
-    isUser: false
-}
-
 const AiChat = () => {
-    const [isTyping] = useState(false)
-    const [messages] = useState<IMessage[]>([startMessage])
-    const [value, setValue] = useState('');
+    const { messages, isLoading } = useAiChat()
 
-    const onChange = (value: string) => {
-        setValue(value)
-    }
+    // const onSendMessage = async (value: string) => {
+    //     sendMessage(value)
+    //     try {
+    //         const category = await routerChain.call({ question: value })
+    //         const answer = await chainsMap[
+    //             category.text.replace('\n', '')
+    //         ].call({ question: value })
 
-    const onSendMessage = () => {
-        setValue('')
-        messages.push({
-            text: value,
-            isUser: true
-        })
-    }
+    //         console.log(answer.services)
+    //     } catch (error) {
+    //         console.log(error)
+    //     }
+    // }
 
-    return <Frame theme={EFrameTheme.LIGHT}>
-        <div className={styles.chat}>
-            {messages.map(({isUser, text}) => {
-                return <div key={text} className={styles.message}>
-                    <span className={`${styles.from} ${isUser ? styles.isUser: ''}`}>{isUser ? 'Вы' : 'ААA'}</span>
-                    <p className={`${styles.text} ${isUser ? styles.isUser: ''}`}>{text}</p>
-                </div>
-            })}
-            {isTyping && <p className={styles.isTyping}>AAA печатает...</p>}
-        </div>
-        <ChatInput value={value} onChange={onChange} onSend={onSendMessage}/>
-    </Frame>
+    console.log({ messages })
+
+    return (
+        <Frame theme={EFrameTheme.LIGHT}>
+            <div className={styles.chat}>
+                {messages.map(({ role, content }) => {
+                    const isUser = role === ERole.USER
+                    return (
+                        <div key={content} className={styles.message}>
+                            <span
+                                className={`${styles.from} ${isUser ? styles.isUser : ''}`}
+                            >
+                                {isUser ? 'Вы' : 'ААA'}
+                            </span>
+                            <p
+                                className={`${styles.text} ${isUser ? styles.isUser : ''}`}
+                            >
+                                {content}
+                            </p>
+                        </div>
+                    )
+                })}
+                {isLoading && (
+                    <p className={styles.isTyping}>AAA печатает...</p>
+                )}
+            </div>
+            {/* <ChatInput onSend={onSendMessage} /> */}
+        </Frame>
+    )
 }
 
 export default AiChat

@@ -5,58 +5,54 @@
     padding-bottom: 8px;
 }
 
-.input {
-    border: none;
-    padding: 10px 20px;
-    border-radius: 10px;
-    font-size: var(--mobile-text);
-    transition: .3s;
-    outline: 2px solid transparent;
-}
-
-.input:focus {
-    outline: 2px solid var(--yellow);
-}
-
 .frame {
     padding: 20px 100px;
 }
 
-.content {
+.formWrapper {
     display: grid;
+    grid-template-areas: 
+    'call title'
+    'inputs textArea'
+    'submit submit';
     grid-template-columns: 1fr 1fr;
+    gap: 40px;
 }
 
-.content h2 {
-    margin: 0;
-    padding: 0;
-    font-weight: 400;
-    font-size: 32px;
-    margin-bottom: 2rem;
+.formWrapper .call,
+.formWrapper .title {
+    font-size: var(--desktop-subtitle);
+    font-weight: 300;
 }
 
-.left {
-    width: 400px;
-    display: flex;
-    flex-direction: column;
-    gap: 30px
+.formWrapper .call {
+    grid-area: call;
 }
 
-.submit {
-    cursor: pointer;
-    font-size: 18px;
-    color: var(--yellow);
+.formWrapper .title {
+    grid-area: title;
+}
+
+.formWrapper .title span{
+    color: var(--yellow)
+}
+
+.formWrapper .inputs {
+    grid-area: inputs;
+}
+
+.formWrapper .textArea {
+    grid-area: textArea;
+    height: 100%;
+}
+
+.formWrapper .submit {
     text-align: right;
-}
-
-.title {
-    font-size: 42px;
-    font-weight: 500;
-}
-
-.aiTitle span {
+    grid-area: submit;
     color: var(--yellow);
+    font-size: var(--desktop-text);
 }
+
 
 @media (max-width: 1024px) {
     .content {
@@ -65,50 +61,58 @@
 }
 
 @media screen and (max-width: 700px) {
-    .title {
-        font-size: var(--mobile-title);
+    .formWrapper {
+        display: grid;
+        grid-template-areas:
+            'call'
+            'inputs'
+            'title'
+            'textArea'
+            'submit';
+        grid-template-columns: 1fr;
+        gap: 10px;
     }
-
-    .content h2 {
-        font-size: var(--mobile-subtitle);
-        margin-bottom: 0;
-    }
-
-    .wrapper {
-        padding: 40px 8px;
-        padding-bottom: 8px;
+    .textArea {
+        min-height: 100px;
     }
     .frame {
+        padding: 10px;
+    }
+
+    .frame.title,
+    .title {
+        font-size: var(--mobile-title);
+        font-weight: 400;
+        padding: 0 20px;
+        margin: 0;
+    }
+
+    .frame.title {
+        padding-bottom: 20px;
+    }
+
+        .formWrapper .textArea {
+        padding: 0 20px;
+    }
+
+    .formWrapper .call {
+        font-size: var(--mobile-subtitle);
+        padding: 20px;
+        margin: 0;
+    }
+
+    .formWrapper .inputs {
+        padding: 0 20px;
+    }
+
+    .formWrapper .title {
+        font-size: var(--mobile-subtitle);
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+
+    .formWrapper .submit {
+        font-size: var(--mobile-text);
         padding: 20px;
     }
-
-    .content {
-        display: grid;
-        grid-template-columns: 1fr;
-    }
-
-    .submit {
-        font-size: var(--mobile-text);
-        text-align: center;
-        margin-bottom: 20px;
-    }
-
-    .left {
-        width: 100%;
-    }
-
-    .area {
-        width: 330px;
-    }
-
-    .aiTitle {
-        font-size: var(--mobile-subtitle)
-    }
-
-    .aiBlock {
-        display: flex;
-        flex-direction: column;
-        gap: 20px
-    }
-
 }

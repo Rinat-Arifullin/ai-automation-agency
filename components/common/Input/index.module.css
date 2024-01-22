@@ -1,0 +1,28 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.wrapper:last-child {
+    margin-bottom: 0;
+}
+
+.label {
+    font-size: var(--desktop-text);
+    margin-bottom: 10px;
+}
+
+.input {
+    outline: none;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: var(--mobile-text)
+}
+
+@media screen and (max-width: 700px) {
+    .label {
+        font-size: var(--mobile-text);
+    }
+}

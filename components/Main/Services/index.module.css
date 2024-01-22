@@ -1,72 +1,23 @@
-.services {
-    color: white;
-}
 
-.submit {
-    cursor: pointer;
-    font-size: 18px;
-    text-align: right;
-    margin-top: 20px;
-}
 
-.submit a {
-    text-decoration: none;
-    color: var(--yellow);
-    padding: 10px;
-}
-
-.title {
-    font-size: 4rem;
-    font-weight: 500;
-    margin: 0;
-}
-
-.content {
+.wrapper {
     display: flex;
     flex-direction: column;
-    border: 1px solid white;
-    border-radius: 25px;
-    margin-top: 40px;
+    gap: 40px;
+}
+.title {
+    font-size: var(--desktop-title);
+    font-weight: 300;
+    padding: 0;
+    margin: 20px 0;
 }
 
-.content .index {
-    font-size: 38px;
-    border-right: 1px solid white;
-    padding:  10px 20px;
-    width: 30px;
-    min-width: 30px;
-    text-align: center;
-}
-
-.content .index:last-child {
-    border-bottom: none;
-}
-
-.content .text {
-    font-size: 24px;
-    padding: 19px 20px;
-}
-
-.content .row {
+.serviceBlockWrapper {
     display: flex;
-    border-bottom: 1px solid white;
+    flex-direction: column;
+    gap: 40px;
 }
 
-.content .row:last-child {
-    border-bottom: none;
-}
-
-.content .service:last-child {
-    border-bottom: none;
-}
-
-.content ul li {
-    margin-bottom: 1.3rem;
-}
-
-.content ul li:last-child {
-    margin-bottom: 0;
-}
 
 @media screen and (max-width: 1135px) {
     .content {
@@ -96,5 +47,4 @@
         font-size: var(--mobile-text);
         text-align: center;
     }
-
 }
