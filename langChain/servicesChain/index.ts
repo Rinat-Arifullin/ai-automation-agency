@@ -1,5 +1,4 @@
-import { config } from 'dotenv'
-config()
+
 
 import { OpenAI } from 'langchain/llms/openai'
 import { LLMChain } from 'langchain/chains'
