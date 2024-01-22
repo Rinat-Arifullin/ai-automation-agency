@@ -1,11 +1,9 @@
 import React from "react";
 import Head from "next/head";
 
-import {config} from 'dotenv'
 import MainPage from "components/Main";
 
 export default function Home() {
-  config();
   return (
     <>
       <Head>
