@@ -2,7 +2,6 @@ import React from 'react'
 import Frame, { EFrameTheme } from 'components/common/Frame'
 import useAiChat from 'AiChat'
 
-import ChatInput from './Input'
 import { ERole } from './types'
 import styles from './index.module.css'
 
@@ -49,7 +48,6 @@ const AiChat = () => {
                     <p className={styles.isTyping}>AAA печатает...</p>
                 )}
             </div>
-            {/* <ChatInput onSend={onSendMessage} /> */}
         </Frame>
     )
 }

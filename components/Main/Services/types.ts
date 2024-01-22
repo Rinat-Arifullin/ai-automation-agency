@@ -1,6 +1,6 @@
 export interface IServiceCard {
     title: string
-    theme: 'white' | 'black';
+    theme?: 'white' | 'black';
     index?: number
     description?: string
 }
