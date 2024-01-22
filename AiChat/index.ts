@@ -5,7 +5,6 @@ import { ERole, IMessage } from 'components/AiChat/types'
 import { initMessages } from './settings'
 
 const openai = new OpenAI({
-    apiKey: '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',
     dangerouslyAllowBrowser: true,
 })
 

@@ -8,7 +8,6 @@ import { PromptTemplate } from 'langchain/prompts'
 import services from './services.json'
 
 const llm = new OpenAI({
-    openAIApiKey: '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',
     temperature: 0,
 })
 

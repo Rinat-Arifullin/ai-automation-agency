@@ -4,7 +4,6 @@ import { LLMChain } from 'langchain/chains'
 import { OpenAI } from 'langchain/llms/openai'
 
 const llm = new OpenAI({
-    openAIApiKey: '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',
     temperature: 0,
 })
 
