@@ -18,7 +18,12 @@
     border: none;
     border-radius: 25px;
     padding: 10px 20px;
-    font-size: var(--mobile-text)
+    font-size: var(--mobile-text);
+    transition: .3s;
+}
+
+.input.invalid {
+    outline: 2px solid var(--red)
 }
 
 @media screen and (max-width: 700px) {

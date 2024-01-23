@@ -4,17 +4,16 @@ import Frame from 'components/common/Frame'
 
 import styles from './index.module.css'
 
-import LinkArrow from 'icons/linkArrow'
-
 import Input from 'components/common/Input'
 import TextArea from 'components/common/TextArea'
 import { sendMessageToBot } from 'utils/sendMessageToBot'
+import SubmitBtn from 'components/common/SubmitBtn'
 
 export interface IContactForm {
     name: string
     phone: string
     telegramOrEmail: string
-    description: string;
+    description: string
 }
 
 const initalForm: IContactForm = {
@@ -24,19 +23,40 @@ const initalForm: IContactForm = {
     description: '',
 }
 
-export const Form = () => {
-    const [form, setForm] = useState<IContactForm>(initalForm);
+let timer: NodeJS.Timeout | null = null
 
-    const onChangeFormField = (field: keyof IContactForm, newValue:string)=>{
-        setForm(state=>({
+export const Form = () => {
+    const [form, setForm] = useState<IContactForm>(initalForm)
+    const [isLoading, setIsLoading] = useState(false)
+    const [submitStatus, setSubmitStatus] = useState<
+        'success' | 'error' | null
+    >(null)
+
+    const onChangeFormField = (field: keyof IContactForm, newValue: string) => {
+        setForm((state) => ({
             ...state,
-            [field]: newValue
+            [field]: newValue,
         }))
     }
 
-    const onSubmit = async ()=>{
-        const response = await sendMessageToBot(form)
-        console.log({response})
+    const onSubmit = () => {
+        setIsLoading(true)
+        if (timer) {
+            timer = null
+        }
+        sendMessageToBot(form)
+            .then(() => {
+                setSubmitStatus('success')
+            })
+            .catch(() => {
+                setSubmitStatus('error')
+            })
+            .finally(() => {
+                timer = setTimeout(() => {
+                    setSubmitStatus(null)
+                }, 3000)
+                setIsLoading(false)
+            })
     }
 
     return (
@@ -55,14 +75,16 @@ export const Form = () => {
                     label="Телефон:"
                     name="phone"
                     value={form.phone}
-                    onChange={(value)=>onChangeFormField('phone', value)}
+                    onChange={(value) => onChangeFormField('phone', value)}
                 />
                 <Input
                     placeholder="@IvanIvanov"
                     label="Telegram или почта:"
                     name="telegramOrEmail"
                     value={form.telegramOrEmail}
-                    onChange={(value)=>onChangeFormField('telegramOrEmail', value)}
+                    onChange={(value) =>
+                        onChangeFormField('telegramOrEmail', value)
+                    }
                 />
             </div>
             <h2 className={styles.title}>
@@ -74,12 +96,17 @@ export const Form = () => {
                     label="Опишите ваш бизнес или запрос: "
                     name="description"
                     value={form.description}
-                    onChange={(value)=>onChangeFormField('description', value)}
+                    onChange={(value) =>
+                        onChangeFormField('description', value)
+                    }
                 />
             </div>
-            <div className={styles.submit} onClick={onSubmit}>
-                Оставить заявку <LinkArrow color="yellow" />
-            </div>
+            <SubmitBtn
+                className={styles.submit}
+                onClick={onSubmit}
+                submitStatus={submitStatus}
+                isLoading={isLoading}
+            />
         </div>
     )
 }

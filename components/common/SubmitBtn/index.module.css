@@ -1,0 +1,60 @@
+.submit {
+    grid-area: submit;
+    color: var(--yellow);
+    font-size: var(--desktop-text);
+    margin-right: -30px;
+}
+
+.iconsWrapper {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    width: 26px;
+    height: 26px;
+    margin-bottom: -3px;
+    padding: 1px;
+}
+.loader {
+    top: 4px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 3.5px dashed var(--yellow);
+    animation-name: loading;
+    animation-timing-function: linear;
+    animation-duration: 1.6s;
+    animation-iteration-count: infinite;
+}
+
+.success,
+.error,
+.loader {
+    right: -26px;
+    position: absolute;
+    display: inline-block;
+    transition: .3s;
+}
+
+.error.isError,
+.success.isSuccess,
+.loader.isLoading {
+    right: 0px;
+}
+
+
+
+@media screen and (max-width: 700px) {
+    .submit {
+        font-size: var(--mobile-text);
+        padding: 20px;
+    }
+}
+
+@keyframes loading {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
