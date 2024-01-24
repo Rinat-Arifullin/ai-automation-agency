@@ -2,7 +2,7 @@
     grid-area: submit;
     color: var(--yellow);
     font-size: var(--desktop-text);
-    margin-right: -30px;
+    cursor: pointer;
 }
 
 .iconsWrapper {
@@ -11,7 +11,7 @@
     overflow: hidden;
     width: 26px;
     height: 26px;
-    margin-bottom: -3px;
+    margin-bottom: -6px;
     padding: 1px;
 }
 .loader {
@@ -29,7 +29,7 @@
 .success,
 .error,
 .loader {
-    right: -26px;
+    left: -26px;
     position: absolute;
     display: inline-block;
     transition: .3s;
@@ -38,7 +38,7 @@
 .error.isError,
 .success.isSuccess,
 .loader.isLoading {
-    right: 0px;
+    left: 0px;
 }
 
 

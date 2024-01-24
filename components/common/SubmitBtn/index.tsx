@@ -27,7 +27,6 @@ const SubmitBtn = ({
             className={`${styles.submit} ${className}`}
             onClick={onClickHanlder}
         >
-            Оставить заявку <LinkArrow color="yellow" />{' '}
             <span className={styles.iconsWrapper}>
                 <span
                     className={`${styles.loader} ${isLoading && styles.isLoading}`}
@@ -43,6 +42,7 @@ const SubmitBtn = ({
                     🚫
                 </span>
             </span>
+            Оставить заявку <LinkArrow color="yellow" />
         </div>
     )
 }
