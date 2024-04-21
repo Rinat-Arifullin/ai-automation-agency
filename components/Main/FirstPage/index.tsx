@@ -8,21 +8,21 @@ const FirstPage = () => {
         <div className={styles.firstPage}>
             <div className={styles.leadMagnet}>
                 <div>
-                    <p>Автоматизация бизнесса</p>
+                    <p>IT для бизнеса</p>
                 </div>
             </div>
             <div className={styles.title}>
-                <h1>AI Automation Agency</h1>
+                <h1>Web Development Agency</h1>
             </div>
             <div className={styles.footer}>
                 <p>
-                    Наши уникальные решения в области автоматизации с
-                    использованием AI меняют правила игры в мире бизнеса,
-                    помогая компаниям повышать эффективность, сокращать издержки
-                    и преодолевать границы своего роста.
+                    Мы - агентство по web-разработке, специализирующееся на
+                    разработке сайтов под ключ, front-end и back-end разработке,
+                    создании мобильных приложений и внедрении AI для современных
+                    и инновационных проектов.
                 </p>
             </div>
-            <ContactForm/>
+            <ContactForm />
         </div>
     )
 }

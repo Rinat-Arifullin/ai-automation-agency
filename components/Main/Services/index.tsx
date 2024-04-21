@@ -4,11 +4,11 @@ import Frame from 'components/common/Frame'
 import { services } from './constats'
 import ServiceBlock from './ServiceBlock'
 
-import styles from './index.module.css';
+import styles from './index.module.css'
 
 const Services = () => {
     return (
-        <Frame>
+        <Frame id="services">
             <h1 className={styles.title}>Услуги</h1>
             <div className={styles.serviceBlockWrapper}>
                 {services.map((serviceBlock, index) => {

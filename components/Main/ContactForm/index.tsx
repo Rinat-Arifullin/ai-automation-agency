@@ -61,7 +61,7 @@ export const Form = () => {
 
     return (
         <div className={styles.formWrapper}>
-            <h2 className={styles.call}>Обратный звонок</h2>
+            <h2 className={styles.call}>Обсудить проект</h2>
             <div className={styles.inputs}>
                 <Input
                     placeholder="Иван"
@@ -88,8 +88,8 @@ export const Form = () => {
                 />
             </div>
             <h2 className={styles.title}>
-                Задайте вопрос о наших услугах или{' '}
-                <span>закажите разрабтку</span>
+                Задайте вопрос о наших услугах, <span>закажите разрабтку</span>{' '}
+                или присоединяйтес в нашу команду
             </h2>
             <div className={styles.textArea}>
                 <TextArea
