@@ -1,11 +1,11 @@
 :root {
     /*---colors---*/
     --white: #FFFFFF;
-    --black: #111D1C;
-    --dark-green: #142423;
+    --black: #11121D;
+    --dark-green: #0C2033;
     --blue: #345E79;
     --blue-gradient: linear-gradient(119deg, #608287 15.97%, #466C7F 39.92%, #04366A 100%);
-    --dark-gradient: linear-gradient(247deg, #111D1C 16.5%, #060D13 99.7%, #111D1C 99.71%);
+    --dark-gradient: linear-gradient(247deg, #11141D 16.5%, #060D13 99.7%, #11111D 99.71%);
     --yellow: #FBFF53;
     --red: #f21818;
     /*------------*/

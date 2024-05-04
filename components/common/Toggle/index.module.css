@@ -2,29 +2,45 @@
     overflow: hidden;
     transition: 0.3s ease;
     padding: 10px 20px;
+    transition: .3s;
+    border-left: 1px solid rgba(255, 255, 255, 0.401);
+}
+
+.collapseContainer.isCollapsed {
+    border-left: 1px solid white;
 }
 
 .collapseLabel {
     cursor: pointer;
     user-select: none;
-    font-size: var(--mobile-text);
-    text-decoration: underline;
+    font-size: var(--desktop-text);
+    width: fit-content;
+    display: flex;
+    align-items: end;
+    gap: 1rem;
+}
+
+.arrowIcon {
+    transition: .3s;
+}
+
+.arrowIcon.isOpen {
+    transform: rotate(180deg);
 }
 
 .collapseContent {
     overflow: hidden;
     transition:  0.3s ease;
     font-size: var(--desktop-text);
+    padding-top: 0rem;
 }
 
+.collapseContent.isOpen {
+    padding-top: 2rem;
+}
 
 .collapseContainer .collapseContent{
-    transition:  0.3s ease;
-    height: 150px;
-}
-
-.collapseContainer.isCollapsed .collapseContent{
-    height: 0px;
+    transition: .3s;
 }
 
 @media screen and (max-width: 700px) {
