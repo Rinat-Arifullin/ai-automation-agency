@@ -18,8 +18,8 @@ const MobileHeader = () => {
         </div>
         <nav className={`${styles.menu} ${isOpen ? styles.isOpen: ''}`}>
             <h1 className={styles.title}>
-                Ai <br/>
-                Automation <br/>
+                Web <br/>
+                Development <br/>
                 Agency <br/>
             </h1>
             <ul>
