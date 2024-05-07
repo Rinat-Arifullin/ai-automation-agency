@@ -3,11 +3,12 @@
     --white: #FFFFFF;
     --black: #11121D;
     --dark-green: #0C2033;
-    --blue: #345E79;
+    --blue: #0C2033;
     --blue-gradient: linear-gradient(119deg, #608287 15.97%, #466C7F 39.92%, #04366A 100%);
-    --dark-gradient: linear-gradient(247deg, #11141D 16.5%, #060D13 99.7%, #11111D 99.71%);
+    --dark-gradient: linear-gradient(247deg, #141823 16.5%, #060D13 99.7%, #11111D 99.71%);
     --yellow: #FBFF53;
     --red: #f21818;
+    --green: #2ea52c;
     /*------------*/
 
     /*---size---*/
@@ -15,9 +16,9 @@
     --desktop-subtitle: 32px;
     --desktop-text: 24px;
 
-    --mobile-title: 28px;
-    --mobile-subtitle: 20px;
-    --mobile-text: 16px;
+    --mobile-title: 32px;
+    --mobile-subtitle: 24px;
+    --mobile-text: 20px;
     /*----------*/
 }
 

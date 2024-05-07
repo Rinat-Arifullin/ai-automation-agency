@@ -1,19 +1,39 @@
 .submit {
-    grid-area: submit;
-    color: var(--yellow);
     font-size: var(--desktop-text);
     cursor: pointer;
+    color: white;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.wrapper {
+    width: fit-content;
+    padding: 10px 30px;
+    border-radius: 25px;
+    border: 1px solid white;
+    transition: .3s;
+}
+
+.wrapper:hover {
+    background: white;
+    color: black;
 }
 
 .iconsWrapper {
     display: inline-block;
     position: relative;
     overflow: hidden;
-    width: 26px;
+    width: 0px;
     height: 26px;
-    margin-bottom: -6px;
+    margin-bottom: -4px;
     padding: 1px;
+    transition: .3s;
 }
+
+.iconsWrapper.hasIcon {
+    width: 26px;
+}
+
 .loader {
     top: 4px;
     width: 16px;

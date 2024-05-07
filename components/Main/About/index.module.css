@@ -13,24 +13,12 @@
     font-weight: 400;
     display: block;
     width: fit-content;
-}
-
-.card h2:after {
-    content: '';
-    display: block;
-    width: 0%;
-    height: 1px;
-    background: var(--yellow);
-    transition: .3s;
-}
-
-.card:hover h2:after {
-    width: 100%;
+    margin-bottom: 10px;
 }
 
 .card p {
     font-size: var(--desktop-text);
-    line-height: 140%;
+    line-height: 150%;
     padding: 0;
     margin: 5px 0;
 }
@@ -38,7 +26,6 @@
 .subTitle {
     font-size: var(--desktop-text);
     line-height: 140%;
-    margin-left: 5rem;
 }
 
 .content {

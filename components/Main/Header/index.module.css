@@ -12,13 +12,19 @@
 }
 
 .header.border {
-    border: 1px solid var(--yellow);
+    border: 1px solid rgba(255, 255, 255, 0.37);
+    background: #11121d6b;
+}
+
+.header.border:hover {
+    border: 1px solid rgba(255, 255, 255, 0.746);
 }
 
 .header nav {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    transition: .3s;
 }
 
 .header ul {
@@ -30,6 +36,7 @@
 }
 
 .header ul li a {
+    transition: .5s;
     text-decoration: none;
     color: white;
     position: relative;

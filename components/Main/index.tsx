@@ -7,8 +7,6 @@ import Services from 'components/Main/Services'
 import HowWeWork from 'components/Main/HowWeWork'
 import ContactForm from 'components/Main/ContactForm'
 
-import Frame from 'components/common/Frame'
-
 import { Montserrat } from 'next/font/google'
 
 import styles from './index.module.css'
@@ -21,14 +19,10 @@ const montserrat = Montserrat({
 const MainPage = () => {
     return (
         <main className={`${montserrat.className} ${styles.wrapper}`}>
+            <Header />
             <div className={styles.content}>
-                <Header />
-                <Frame>
-                    <FirstPage />
-                </Frame>
-                <div id="about">
-                    <About />
-                </div>
+                <FirstPage />
+                <About />
                 {/* <Cases/> */}
                 <Services />
                 <HowWeWork />

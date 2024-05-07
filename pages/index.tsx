@@ -3,9 +3,11 @@ import Head from 'next/head'
 
 import MainPage from 'components/Main'
 
+import styles from './index.module.css';
+
 export default function Home() {
     return (
-        <>
+        <div className={styles.root}>
             <Head>
                 <title>Ai Automation Agency</title>
                 <meta
@@ -15,6 +17,6 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <MainPage />
-        </>
+        </div>
     )
 }

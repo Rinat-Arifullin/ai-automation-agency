@@ -1,7 +1,5 @@
 import React from 'react'
 
-import LinkArrow from 'icons/linkArrow'
-
 import styles from './index.module.css'
 
 interface ISubmitBtnProps {
@@ -22,27 +20,34 @@ const SubmitBtn = ({
             onClick()
         }
     }
+
+    const hasIcon =
+        isLoading || submitStatus === 'success' || submitStatus === 'error';
     return (
         <div
             className={`${styles.submit} ${className}`}
             onClick={onClickHanlder}
         >
-            <span className={styles.iconsWrapper}>
+            <div className={styles.wrapper}>
                 <span
-                    className={`${styles.loader} ${isLoading && styles.isLoading}`}
-                ></span>
-                <span
-                    className={`${styles.success} ${submitStatus === 'success' && !isLoading && styles.isSuccess}`}
+                    className={`${styles.iconsWrapper} ${hasIcon && styles.hasIcon}`}
                 >
-                    ✅
+                    <span
+                        className={`${styles.loader} ${isLoading && styles.isLoading}`}
+                    ></span>
+                    <span
+                        className={`${styles.success} ${submitStatus === 'success' && !isLoading && styles.isSuccess}`}
+                    >
+                        ✅
+                    </span>
+                    <span
+                        className={`${styles.error} ${submitStatus === 'error' && !isLoading && styles.isError}`}
+                    >
+                        🚫
+                    </span>
                 </span>
-                <span
-                    className={`${styles.error} ${submitStatus === 'error' && !isLoading && styles.isError}`}
-                >
-                    🚫
-                </span>
-            </span>
-            Оставить заявку <LinkArrow color="yellow" />
+                Оставить заявку
+            </div>
         </div>
     )
 }

@@ -5,6 +5,10 @@
     padding-bottom: 8px;
 }
 
+.wrapper.green {
+    background: var(--green);
+}
+
 .frame {
     padding: 20px 100px;
 }
@@ -37,6 +41,10 @@
     color: var(--yellow)
 }
 
+.wrapper.green .formWrapper .title span{
+    color: var(--green)
+}
+
 .formWrapper .inputs {
     grid-area: inputs;
 }
@@ -49,7 +57,6 @@
 .formWrapper .submit {
     text-align: right;
     grid-area: submit;
-    color: var(--yellow);
     font-size: var(--desktop-text);
 }
 

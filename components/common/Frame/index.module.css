@@ -13,7 +13,7 @@
 }
 
 .wrapperOutline {
-    border: 1px solid var(--white);
+    border: 1px solid rgba(255, 255, 255, 0.29);
     padding: 10px 8px;
     border-radius: 23px;
     transition: .3s;

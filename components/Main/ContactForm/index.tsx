@@ -111,9 +111,11 @@ export const Form = () => {
     )
 }
 
-const ContactForm = () => {
+
+
+const ContactForm = ({theme = 'yellow'}:{theme?: 'yellow'|'green'}) => {
     return (
-        <div id="contacts" className={styles.wrapper}>
+        <div id="contacts" className={`${styles.wrapper} ${styles[theme]}`}>
             <Frame className={styles.frame}>
                 <h1 className={styles.title}>Заявка на разработку</h1>
                 <div className={styles.content}>
